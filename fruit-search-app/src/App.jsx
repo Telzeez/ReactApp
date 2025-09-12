@@ -5,6 +5,7 @@ import './App.css'
 export function FruitSearch(){
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
+
   useEffect(() => {   
     if(query.trim() === ''){
       setResults([]);
@@ -13,17 +14,18 @@ export function FruitSearch(){
 
     const timeId = setTimeout(async () => {
       try {
-        const response = await fetch(`https://fruit-search.freecodecamp.rocks/api/fruits)`);
+        // Using a CORS proxy to avoid CORS issues
+        // visit https://cors-anywhere.herokuapp.com/ to request temporary access to the demo server (Important) do that first
+        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://fruityvice.com/api/fruit/${query}`);
         const data = await response.json();
-        const filteredResults = data.filter(fruit => 
-          fruit.name.toLowerCase().includes(query.toLowerCase())
-        );
-        setResults(filteredResults);
+        setResults(data);
       } catch (error) {
          console.error('Error fetching data:', error);
       }
-}, 700); return () => { clearTimeout(timeId) }  
-        ;}, [query]);
+      }, 700); 
+      return () => { clearTimeout(timeId) };
+      }, [query]);
+
 function handleSubmit(e){ e.preventDefault();}
   return(
     <div className='container'>
