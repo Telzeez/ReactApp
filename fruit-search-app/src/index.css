@@ -1,0 +1,28 @@
+.container{
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+
+}
+.container input{
+  
+  width: 80%;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+ul{
+  font-size: 20px;
+  list-style-type:decimal;
+  padding: 0;
+}
+h1{
+  text-align: center;
+}
