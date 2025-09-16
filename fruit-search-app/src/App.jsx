@@ -1,7 +1,7 @@
 import { useState, useEffect, use} from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
 export function FruitSearch(){
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);

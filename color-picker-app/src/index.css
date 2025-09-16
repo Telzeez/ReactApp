@@ -1,0 +1,18 @@
+#color-container{
+  background-color: #ffffff;
+  margin: 20vh auto;
+  width: 500px;
+  text-align: center;
+  border-radius: 20px;
+  height: 300px;
+  
+}
+label{
+  color: white;
+  display: block;
+  padding: 20px;
+}
+#color-picker{
+  background-color: yellow;
+  margin: 10vh auto;
+}
