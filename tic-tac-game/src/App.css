@@ -1,0 +1,15 @@
+button {
+    padding: 30px;
+    margin: 5px;
+    min-width: 100px;
+
+}
+.status {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.reset{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;}
+
